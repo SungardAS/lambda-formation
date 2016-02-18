@@ -31,6 +31,34 @@ describe('project1', function() {
       );
     });
 
+    it("should fail for a bad requestType", function() {
+      var event = {
+        resourceType: "resource1",
+        requestType: "bogus"
+      };
+
+      var context = {
+        done: function(err) {
+          assert(err);
+        }
+      };
+      project1.handler(event,context);
+    });
+
+    it("should handle a Custom Resource from CloudFormation", function() {
+      var event = {
+        ResourceType: "Custom::resource1",
+        RequestType: "Create"
+      };
+
+      var context = {
+        done: function(err) {
+          assert.ifError(err);
+        }
+      };
+      project1.handler(event,context);
+    });
+
     describe("resource1", function() {
 
       describe("create", function() {
