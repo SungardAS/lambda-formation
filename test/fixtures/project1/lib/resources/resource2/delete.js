@@ -3,5 +3,5 @@ var destroy = require('../../../../../../lib/resource/delete')
 
 // Bad function, no callback
 module.exports.handler = function(event, context) {
-  create.apply(this, [event, context]);
+  destroy.apply(this, [event, context]);
 };
