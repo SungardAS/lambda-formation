@@ -21,6 +21,7 @@
   "homepage": "https://github.com/SungardAS/lambda-formation#readme",
   "dependencies": {
     "caller-id": "^0.1.0",
+    "cfn-responder": "^0.1.0",
     "lodash": "^4.5.0",
     "request": "^2.69.0",
     "underscore.string": "^3.2.3"
