@@ -1,3 +1,3 @@
-var done = require('./lib/done');
+var util = require('./lib/util');
 
-module.exports.done = done;
+module.exports.util = util;

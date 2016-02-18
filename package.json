@@ -1,14 +1,14 @@
 {
-  "name": "lambda-formation-utils",
+  "name": "lambda-formation",
   "version": "0.1.0",
   "description": "Utility functions for lambda-formation projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha test/unit/*.test.js test/integration/**/*.test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SungardAS/lambda-formation-utils.git"
+    "url": "git+https://github.com/SungardAS/lambda-formation.git"
   },
   "keywords": [
     "lambda-formation"
@@ -16,7 +16,18 @@
   "author": "kevin.mcgrath@sungardas.com",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/SungardAS/lambda-formation-utils/issues"
+    "url": "https://github.com/SungardAS/lambda-formation/issues"
   },
-  "homepage": "https://github.com/SungardAS/lambda-formation-utils#readme"
+  "homepage": "https://github.com/SungardAS/lambda-formation#readme",
+  "dependencies": {
+    "caller-id": "^0.1.0",
+    "lodash": "^4.5.0",
+    "request": "^2.69.0",
+    "underscore.string": "^3.2.3"
+  },
+  "devDependencies": {
+    "assert": "^1.3.0",
+    "lodash": "^4.5.0",
+    "mocha": "^2.4.5"
+  }
 }
