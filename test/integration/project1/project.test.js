@@ -25,7 +25,7 @@ describe('project1', function() {
         }
       };
       assert.throws(
-        () => {
+        function() {
           project1.handler(event,context);
         }
       );
