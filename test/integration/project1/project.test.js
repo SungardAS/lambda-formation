@@ -45,6 +45,20 @@ describe('project1', function() {
       project1.handler(event,context);
     });
 
+    it("should fail for a bad resourceType", function() {
+      var event = {
+        resourceType: "resourceBADBADBAD",
+        requestType: "create"
+      };
+
+      var context = {
+        done: function(err) {
+          assert(err);
+        }
+      };
+      project1.handler(event,context);
+    });
+
     it("should handle a Custom Resource from CloudFormation", function() {
       var event = {
         ResourceType: "Custom::resource1",
