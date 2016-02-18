@@ -1,0 +1,22 @@
+{
+  "name": "lambda-formation-utils",
+  "version": "0.1.0",
+  "description": "Utility functions for lambda-formation projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SungardAS/lambda-formation-utils.git"
+  },
+  "keywords": [
+    "lambda-formation"
+  ],
+  "author": "kevin.mcgrath@sungardas.com",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/SungardAS/lambda-formation-utils/issues"
+  },
+  "homepage": "https://github.com/SungardAS/lambda-formation-utils#readme"
+}
