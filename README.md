@@ -2,7 +2,7 @@
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url] [![Dependency
 Status][daviddm-image]][daviddm-url] [![Coverage
-percentage][coveralls-image]][coveralls-url][![Code
+percentage][coveralls-image]][coveralls-url] [![Code
 Climate][codeclimate-image]][codeclimate-url]
 
 
