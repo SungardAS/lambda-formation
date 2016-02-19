@@ -2,7 +2,10 @@
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url] [![Dependency
 Status][daviddm-image]][daviddm-url] [![Coverage
-percentage][coveralls-image]][coveralls-url]
+percentage][coveralls-image]][coveralls-url][![Code
+Climate][codeclimate-image]][codeclimate-url]
+
+
 
 A small framework for building nodejs [AWS
 Lambda](https://aws.amazon.com/lambda/) projects that are compatible with [AWS
@@ -22,7 +25,7 @@ Use the Yeoman generator
     
     ? What's the name of your project? my-lambda-formation-project
 
-Then move into the new project directory and run:
+Now lets create a resource:
 
     cd my-lambda-formation-project
     
@@ -48,9 +51,9 @@ Now you have a project structure similar to the following:
     |- package.json
 
 
-Add as many resources as you like. A resource will map directly to a
+Add as many resources as necessary. A resource will map directly to a
 CloudFormation Custom Resource. Beneath each resource a skeleton for controling `Create`,
-`Update` and `Delete` request types will be generated.
+`Update` and `Delete` request types have be generated.
 
 
 ## How does it work?
@@ -94,7 +97,7 @@ While the structure is designed to work with CloudFormation any handler
 can be called directly though Lambda.
 
 The main handler in the root `index.js` file is a router that can get
-you to any resource in the project.
+to any resource in the project.
 
 Parameters to the main handler support multiple cases for the first
 letter.  CloudFormation defaults to capitals while it is convention for
@@ -120,7 +123,7 @@ Direct Lambda execution:
 The `create.js`, `update.js` and `delete.js` files under each resource
 in `lib/resources` is where any code or modules should be added.
 
-You can choose to add code directly to the stubbed functions or write a module
+Add code directly to the stubbed functions or write a module
 and require it here.  Please do not alter the `handler` function.
 This function controls the routing and execution response based on
 direct Lambda versus CloudFormation calls.
@@ -161,3 +164,5 @@ https://david-dm.org/SungardAS/lambda-formation.svg?theme=shields.io
 https://coveralls.io/repos/SungardAS/lambda-formation/badge.svg
 [coveralls-url]:
 https://coveralls.io/r/SungardAS/lambda-formation
+[codeclimate-image]: https://codeclimate.com/github/SungardAS/lambda-formation/badges/gpa.svg
+[codeclimate-url]: https://codeclimate.com/github/SungardAS/lambda-formation
