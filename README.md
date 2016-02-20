@@ -140,16 +140,17 @@ Lambda and complete the context for the execution.
 
 On success `err` should be `null`
 
-The `event` and `context` objects are required and can be simply passed
+The `event` and `context` objects are required and can simply be passed
 through.
 
-The `data` parameter if included must be null or an object of key/value pairs
+The `data` parameter is optional and if included must be null or an object of key/value pairs
 that describe resource. When executed though CloudFormation the
 keys will be availbale as Resource Outputs.  For direct Lambda calls the
 object will be sent to `context.done`.
 
 The `id` parameter is only required for 'create.js'.  This will be
-the ID CloudFormation will use to track the resource.
+the ID CloudFormation will use to track the resource.  If `id` is
+provided then `data` must also be defined.
 
 
 [npm-image]: https://badge.fury.io/js/lambda-formation.svg
