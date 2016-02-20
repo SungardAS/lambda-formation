@@ -1,7 +1,7 @@
 {
   "name": "lambda-formation",
-  "version": "0.1.0",
-  "description": "Utility functions for lambda-formation projects",
+  "version": "0.1.1",
+  "description": "A small framework for building nodejs AWS Lambda projects that are compatible with AWS CloudFormation Custom Resources",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha test/unit/*.test.js test/integration/**/*.test.js"
