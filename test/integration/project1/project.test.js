@@ -24,11 +24,7 @@ describe('project1', function() {
           assert(err);
         }
       };
-      assert.throws(
-        function() {
-          project1.handler(event,context);
-        }
-      );
+      project1.handler(event,context);
     });
 
     it("should fail for a bad requestType", function() {
