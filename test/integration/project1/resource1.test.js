@@ -13,11 +13,7 @@ describe('project1', function() {
           assert(err);
         }
       };
-      assert.throws(
-        function() {
-          resource1.handler(event,context);
-        }
-      );
+      resource1.handler(event,context);
     });
 
 
