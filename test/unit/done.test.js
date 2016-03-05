@@ -27,10 +27,9 @@ describe("util done", function() {
     util.done(null,{},context,{});
   });
 
-  it("should call cfn-response if CloudFormation", function(done) {
+  it("should call cfn-responder if CloudFormation", function(done) {
     var context = {
       done: function(err,obj) {
-        obj = JSON.parse(obj);
         assert(obj.StackId);
         done();
       }
@@ -50,10 +49,9 @@ describe("util done", function() {
     );
   });
 
-  it("should set cfn-response to FAILED for CloudFormation if err", function(done) {
+  it("should set cfn-responder to FAILED for CloudFormation if err", function(done) {
     var context = {
       done: function(err,obj) {
-        obj = JSON.parse(obj || {});
         assert(obj.StackId);
         done();
       }
