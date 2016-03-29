@@ -157,7 +157,14 @@ The `id` parameter is only required for 'create.js'.  This will be
 the ID CloudFormation will use to track the resource.  If `id` is
 provided then `data` must also be defined.
 
+## [![Sungard Availability Services | Labs][labs-logo]][labs-github-url]
 
+This project is maintained by the Labs team at [Sungard Availability
+Services](http://sungardas.com)
+
+
+[labs-github-url]: https://sungardas.github.io
+[labs-logo]: https://raw.githubusercontent.com/SungardAS/repo-assets/master/images/logos/sungardas-labs-logo-small.png
 [npm-image]: https://badge.fury.io/js/lambda-formation.svg
 [npm-url]: https://npmjs.org/package/lambda-formation
 [travis-image]:
