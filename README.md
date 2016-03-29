@@ -1,4 +1,11 @@
 # lambda-formation
+
+A small framework for building nodejs [AWS
+Lambda](https://aws.amazon.com/lambda/) projects that are compatible with [AWS
+CloudFormation](https://aws.amazon.com/cloudformation/) [Custom Resources](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html).
+
+![lambda-formation](./docs/images/lambda-formation.png?raw=true)
+
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url] [![Dependency
 Status][daviddm-image]][daviddm-url] [![Coverage
@@ -7,9 +14,7 @@ Climate][codeclimate-image]][codeclimate-url]
 
 
 
-A small framework for building nodejs [AWS
-Lambda](https://aws.amazon.com/lambda/) projects that are compatible with [AWS
-CloudFormation](https://aws.amazon.com/cloudformation/) [Custom Resources](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html).
+
 
 
 The functions in a lambda-formation project can also be run directly
