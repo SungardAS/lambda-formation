@@ -159,8 +159,8 @@ provided then `data` must also be defined.
 
 ## Examples
 
-[lambda-formation-example-resources](https://github.com/SungardAS/lambda-formation-example-resources)
-[spotinst-lambda](https://github.com/SungardAS/spotinst-lambda)
+* [lambda-formation-example-resources](https://github.com/SungardAS/lambda-formation-example-resources)
+* [spotinst-lambda](https://github.com/SungardAS/spotinst-lambda)
 
 ## [![Sungard Availability Services | Labs][labs-logo]][labs-github-url]
 
