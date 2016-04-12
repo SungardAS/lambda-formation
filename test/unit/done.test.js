@@ -11,7 +11,7 @@ describe("util done", function() {
     .reply(200, {});
 
     nock('https://fake.url')
-    .put('/', {"Status":"FAILED","Reason":"See the details in CloudWatch Log Stream: undefined","StackId":"arn:aws:cloudformation:us-east-1:namespace:stack/stack-name/guid","RequestId":"unique id for this create request","LogicalResourceId":"name of resource in template","Data":{}})
+    .put('/', {"Status":"FAILED","Reason":"This didn't work","StackId":"arn:aws:cloudformation:us-east-1:namespace:stack/stack-name/guid","RequestId":"unique id for this create request","LogicalResourceId":"name of resource in template","Data":{}})
     .reply(200, {});
   });
 
@@ -49,9 +49,10 @@ describe("util done", function() {
     );
   });
 
-  it("should set cfn-responder to FAILED for CloudFormation if err", function(done) {
+  it.only("should set cfn-responder to FAILED for CloudFormation if err", function(done) {
     var context = {
       done: function(err,obj) {
+        console.log(err,obj);
         assert(obj.StackId);
         done();
       }
