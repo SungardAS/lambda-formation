@@ -1,6 +1,6 @@
 {
   "name": "lambda-formation",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A small framework for building nodejs AWS Lambda projects that are compatible with AWS CloudFormation Custom Resources",
   "main": "index.js",
   "scripts": {
@@ -21,9 +21,12 @@
   "homepage": "https://github.com/SungardAS/lambda-formation#readme",
   "dependencies": {
     "caller-id": "^0.1.0",
-    "cfn-responder": "^0.1.0",
-    "lodash": "^4.5.0",
-    "request": "^2.69.0",
+    "cfn-responder": "^0.1.5",
+    "coveralls": "^2.11.9",
+    "istanbul": "^0.4.3",
+    "lodash": "^4.10.0",
+    "nock": "^7.7.3",
+    "request": "^2.71.0",
     "underscore.string": "^3.2.3"
   },
   "devDependencies": {

@@ -11,7 +11,7 @@ describe("util done", function() {
     .reply(200, {});
 
     nock('https://fake.url')
-    .put('/', {"Status":"FAILED","Reason":"See the details in CloudWatch Log Stream: undefined","StackId":"arn:aws:cloudformation:us-east-1:namespace:stack/stack-name/guid","RequestId":"unique id for this create request","LogicalResourceId":"name of resource in template","Data":{}})
+    .put('/', {"Status":"FAILED","Reason":"This didn't work","StackId":"arn:aws:cloudformation:us-east-1:namespace:stack/stack-name/guid","RequestId":"unique id for this create request","LogicalResourceId":"name of resource in template","Data":{}})
     .reply(200, {});
   });
 
