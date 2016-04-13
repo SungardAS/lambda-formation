@@ -1,20 +1,16 @@
 # lambda-formation
 
-A small framework for building nodejs [AWS
-Lambda](https://aws.amazon.com/lambda/) projects that are compatible with [AWS
-CloudFormation](https://aws.amazon.com/cloudformation/) [Custom Resources](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html).
+A small framework for building nodejs [AWS Lambda][aws-lambda-url]
+projects that are compatible with [AWS CloudFormation][aws-cloudformation-url]
+[Custom Resources][aws-custom-resources-url].
 
-![lambda-formation](./docs/images/lambda-formation.png?raw=true)
+[![lambda-formation][lambda-formation-image]][lambda-formation-url]
 
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url] [![Dependency
-Status][daviddm-image]][daviddm-url] [![Coverage
-percentage][coveralls-image]][coveralls-url] [![Code
-Climate][codeclimate-image]][codeclimate-url]
-
-
-
-
+[![Build Status][travis-image]][travis-url]
+[![Dependency Status][daviddm-image]][daviddm-url]
+[![Coverage percentage][coveralls-image]][coveralls-url]
+[![Code Climate][codeclimate-image]][codeclimate-url]
 
 
 The functions in a lambda-formation project can also be run directly
@@ -26,17 +22,13 @@ CloudFormation.
 Use the Yeoman generator
 [generator-lambda-formation](https://github.com/SungardAS/generator-lambda-formation)
 
-    yo lambda-formation:project
-    
-    ? What's the name of your project? my-lambda-formation-project
+    yo lambda-formation:project my-lambda-formation-project
 
 Now lets create a resource:
 
     cd my-lambda-formation-project
     
-    yo lambda-formation:resource
-    
-    ? What's the name of your resource? resource1
+    yo lambda-formation:resource resource1
 
 Now you have a project structure similar to the following:
 
@@ -162,7 +154,8 @@ provided then `data` must also be defined.
 * [lambda-formation-example-resources](https://github.com/SungardAS/lambda-formation-example-resources)
 * [spotinst-lambda](https://github.com/SungardAS/spotinst-lambda)
 
-## [![Sungard Availability Services | Labs][labs-logo]][labs-github-url]
+## Sungard Availability Services | Labs
+[![Sungard Availability Services | Labs][labs-logo]][labs-github-url]
 
 This project is maintained by the Labs team at [Sungard Availability
 Services](http://sungardas.com)
@@ -189,3 +182,9 @@ https://coveralls.io/repos/SungardAS/lambda-formation/badge.svg
 https://coveralls.io/r/SungardAS/lambda-formation
 [codeclimate-image]: https://codeclimate.com/github/SungardAS/lambda-formation/badges/gpa.svg
 [codeclimate-url]: https://codeclimate.com/github/SungardAS/lambda-formation
+
+[aws-lambda-url]: https://aws.amazon.com/lambda/
+[aws-cloudformation-url]: https://aws.amazon.com/cloudformation/
+[aws-custom-resources-url]: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html
+[lambda-formation-image]: ./docs/images/lambda-formation.png?raw=true
+[lambda-formation-url]: https://github.com/SungardAS/lambda-formation
