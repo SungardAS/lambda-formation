@@ -49,10 +49,9 @@ describe("util done", function() {
     );
   });
 
-  it.only("should set cfn-responder to FAILED for CloudFormation if err", function(done) {
+  it("should set cfn-responder to FAILED for CloudFormation if err", function(done) {
     var context = {
       done: function(err,obj) {
-        console.log(err,obj);
         assert(obj.StackId);
         done();
       }
