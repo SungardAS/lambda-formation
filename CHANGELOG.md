@@ -3,6 +3,10 @@ All notable changes to this project will be documented here in
 accordance with [Keep a CHANGELOG][keep-changelog-url].
 This project adheres to [Semantic Versioning][semver-url].
 
+## [0.1.7] - 2016-06-18
+### Fixed
+- typo in package.json
+
 ## [0.1.6] - 2016-06-18
 ### Added
 - Handlers detect if a message is from SNS and will normailze the event
