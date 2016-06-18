@@ -114,6 +114,26 @@ Direct Lambda execution:
       "myCustomParam": "myCustomValue"
     }
 
+### Cross-Region Support with SNS
+
+For regions that do not support Lambda, an SNS topic can be set as the
+`ServiceToken` in the CloudFormation template.
+
+#### Example
+
+Run a CloudFormation Template that uses lambda-formation resources in
+`sa-east-1`, which as of this writting does not support Lambda.
+
+1. Upload the lambda-formation project to us-east-1 (or other Lambda
+  supported region)
+2. Create an SNS Topic in `sa-east-1`
+3. Subscribe the lambda-formation function from step #1 to the SNS Topic
+   in step #2
+4. Launch CloudFormation in `sa-east-1` with the `ServiceToken` set to
+   the SNS Topic set in step #2
+
+lambda-formation will take care of processing the SNS message and
+responding to the CloudFormation stack
 
 ## Where does my code go?
 

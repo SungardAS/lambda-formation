@@ -1,5 +1,5 @@
-var assert = require('assert'),
-  project1 = require('../../fixtures/project1');
+var assert = require('assert');
+var project1 = require('../../fixtures/project1');
 
 describe('project1', function() {
   describe("handler", function() {
@@ -64,6 +64,45 @@ describe('project1', function() {
       var context = {
         done: function(err) {
           assert.ifError(err);
+        }
+      };
+      project1.handler(event,context);
+    });
+
+    it("should handle a Custom Resource from SNS", function() {
+      var event = {
+        Records: [{
+          EventSource: "aws:sns",
+          Sns: {
+            Message: JSON.stringify({
+              ResourceType: "Custom::resource1",
+              RequestType: "Create"
+            })
+          }
+        }]
+      };
+
+      var context = {
+        done: function(err) {
+          assert.ifError(err);
+        }
+      };
+      project1.handler(event,context);
+    });
+
+    it("should fail if SNS message is not valid JSON", function() {
+      var event = {
+        Records: [{
+          EventSource: "aws:sns",
+          Sns: {
+            Message: "["
+          }
+        }]
+      };
+
+      var context = {
+        done: function(err) {
+          assert(err);
         }
       };
       project1.handler(event,context);
