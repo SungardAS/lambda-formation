@@ -1,7 +1,7 @@
 {
   "name": "lambda-formation",
   "version": "0.1.6",
-  "publishConfig" {
+  "publishConfig": {
     "tag": "latest"
   },
   "description": "A small framework for building nodejs AWS Lambda projects that are compatible with AWS CloudFormation Custom Resources",
