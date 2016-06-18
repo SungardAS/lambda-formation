@@ -121,8 +121,9 @@ For regions that do not support Lambda, an SNS topic can be set as the
 
 #### Example
 
-Run a CloudFormation Template that uses lambda-formation resources in
-`sa-east-1`, which as of this writting does not support Lambda.
+Run a CloudFormation Template `sa-east-1` (as of this release does not
+support Lambda) that uses lambda-formation resources in
+`us-east-1`.
 
 1. Upload the lambda-formation project to us-east-1 (or other Lambda
   supported region)
