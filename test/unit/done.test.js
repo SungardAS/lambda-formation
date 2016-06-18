@@ -1,6 +1,6 @@
-var assert = require('assert'),
-  nock = require('nock');
-  util = require('../../lib/util');
+var assert = require('assert');
+var nock = require('nock');
+var util = require('../../lib/util');
 
 
 describe("util done", function() {

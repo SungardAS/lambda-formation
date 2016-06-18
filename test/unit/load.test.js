@@ -1,7 +1,7 @@
 var lambdaFormation = require('../../');
 var assert = require('assert');
 
-describe("load", function() {
+describe("util.load", function() {
   it("should load", function() {
     assert(lambdaFormation);
   });
