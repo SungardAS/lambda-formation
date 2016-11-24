@@ -1,8 +1,17 @@
 language: node_js
 node_js:
-  - stable
-  - v5
-  - v4
-  - '0.12'
-after_script: NODE_ENV=test ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -R spec --timeout 15000 --recursive test/ && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
-
+- stable
+- v5
+- v4
+- '0.12'
+after_script: NODE_ENV=test ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha
+  --report lcovonly -- -R spec --timeout 15000 --recursive test/ && cat ./coverage/lcov.info
+  | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+deploy:
+  provider: npm
+  email: as.us.labs@sungardas.com
+  api_key:
+    secure: EGiTvocsnCwI6MgB+/NBDECbQs3mu38WilzA/QbfTEdD9Z+g2xKykr5KZrnBmcuC+6/XI2liASLeymHayPWBVnPheGQyuxgSS5uvIVYb9jU05X7v9s/jiYF83yfhzTLx8/elJV82BRj94u3Cq35gGl64kUgV658aRiAVbCaUxpeLIRkwc07l6JKEJ7egOe2jheNjHN5wKFKRrmlqxcUvgoNDvE+21bI1PnHbbIAgXLT6cnRQL4/nJnK55uJOXEb8cVUc6mPoHpO+EwqI3zzIttBfF/Aouw86638H2eTJFEJEiF4hOOYrfK68+FXKwobDrz3a1J8d44OaVNX3MA0JTSt2blb/r9GLobwa36qnIrmZ+E6qJHJtekJFTE7m7JG6NegXb++NW/8aPs10x3HL+XfbsBGyvoRDjtBEz1aTr1Nr8Uy5MujviF7dDEIk1uCYdIMuA2nzspSdMJg+6cz/yj3xe0vDactTgU44WhRiYVjtjEn9AGO6+S0Wa2+RzgT2jOUWoDX08GPme7cLFLKXMx31lEs5gydhVd3x7dciXDZE6MmCArNXE7aaTCzWhi/2hjapfxwnt4yWggRspJJdC7srQpdPw8jjTEdCEkNBVpVWXjiK95mwyqDWV3ahIXtlCx6Ua37lS2Oxlyf5/gpOEEf+WiL4bshAi7IEVlRDswI=
+  on:
+    tags: true
+    repo: SungardAS/lambda-formation
