@@ -3,6 +3,11 @@ All notable changes to this project will be documented here in
 accordance with [Keep a CHANGELOG][keep-changelog-url].
 This project adheres to [Semantic Versioning][semver-url].
 
+## [0.1.9] - 2017-01-09
+### Fixed
+- Always set PhysicalId if it exists. Fixes issues with updates that
+  incorrectly change the ID when null is returned
+
 ## [0.1.8] - 2016-11-20
 ### Added
 - Accept and pass through options for cfn-responder
