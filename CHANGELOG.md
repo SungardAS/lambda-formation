@@ -3,6 +3,10 @@ All notable changes to this project will be documented here in
 accordance with [Keep a CHANGELOG][keep-changelog-url].
 This project adheres to [Semantic Versioning][semver-url].
 
+## [0.1.10] - 2017-05-15
+### Fixed
+- CloudFormation `Reason` should always be a string
+
 ## [0.1.9] - 2017-01-09
 ### Fixed
 - Always set PhysicalId if it exists. Fixes issues with updates that
