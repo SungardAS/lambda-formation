@@ -7,7 +7,7 @@
   "description": "A small framework for building nodejs AWS Lambda projects that are compatible with AWS CloudFormation Custom Resources",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha test/unit/*.test.js test/integration/**/*.test.js"
+    "test": "mocha test/unit/*.test.js test/integration/**/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -24,16 +24,16 @@
   "homepage": "https://github.com/SungardAS/lambda-formation#readme",
   "dependencies": {
     "caller-id": "^0.1.0",
-    "cfn-responder": "^1.0.0",
-    "lodash": "^4.17.2",
-    "request": "^2.79.0",
+    "cfn-responder": "^1.0.2",
+    "lodash": "^4.17.4",
+    "request": "^2.81.0",
     "underscore.string": "^3.3.4"
   },
   "devDependencies": {
     "assert": "^1.4.1",
-    "coveralls": "^2.11.15",
+    "coveralls": "^2.13.1",
     "istanbul": "^0.4.5",
-    "mocha": "^3.1.2",
-    "nock": "^9.0.2"
+    "mocha": "^3.4.1",
+    "nock": "^9.0.13"
   }
 }
