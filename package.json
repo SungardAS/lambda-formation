@@ -27,7 +27,8 @@
     "cfn-responder": "^1.0.2",
     "lodash": "^4.17.4",
     "request": "^2.81.0",
-    "underscore.string": "^3.3.4"
+    "underscore.string": "^3.3.4",
+    "winston": "^2.3.1"
   },
   "devDependencies": {
     "assert": "^1.4.1",
