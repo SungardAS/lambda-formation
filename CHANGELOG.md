@@ -3,6 +3,10 @@ All notable changes to this project will be documented here in
 accordance with [Keep a CHANGELOG][keep-changelog-url].
 This project adheres to [Semantic Versioning][semver-url].
 
+## [0.1.11] - 2017-06-02
+### Added
+- Logging [#10] [estahn]
+
 ## [0.1.10] - 2017-05-15
 ### Fixed
 - CloudFormation `Reason` should always be a string
