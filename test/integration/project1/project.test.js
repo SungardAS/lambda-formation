@@ -261,5 +261,27 @@ describe('project1', function() {
         });
       });
     });
+
+    describe("resource3", function() {
+
+      describe("create", function() {
+
+        it("should run without error", function(cb) {
+          var event = {
+            resourceType: "resource3",
+            requestType: "create"
+          };
+
+          var context = {
+            done: function(err,data,id) {
+              assert.equal(err, 'ReferenceError: dont_fail_badly is not defined');
+              cb();
+            }
+          };
+          project1.handler(event,context);
+        });
+      });
+
+    });
   });
 });
