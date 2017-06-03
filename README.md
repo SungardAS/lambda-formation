@@ -170,6 +170,23 @@ The `id` parameter is only required for 'create.js'.  This will be
 the ID CloudFormation will use to track the resource.  If `id` is
 provided then `data` must also be defined.
 
+### Logging
+
+Logging is pre-configured via the [winston][winston-github-url] library and can be included
+via lambda-formation:
+
+    var logger = require('lambda-formation').logger;
+
+Within your code use the winston shortcut methods `log`, `info`, `debug`:
+
+    logger.log('info', 'My messages');
+    logger.info('My message');
+    logger.debug('My message');
+    ...
+
+Framework internal logs will be logged with log-level `debug`.
+To enable them to be logged to CloudWatch set the environment variable `CFN_LOG_LEVEL` to `debug`.
+
 ## Examples
 
 * [lambda-formation-example-resources](https://github.com/SungardAS/lambda-formation-example-resources)
@@ -209,3 +226,5 @@ https://coveralls.io/r/SungardAS/lambda-formation
 [aws-custom-resources-url]: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html
 [lambda-formation-image]: ./docs/images/lambda-formation.png?raw=true
 [lambda-formation-url]: https://github.com/SungardAS/lambda-formation
+
+[winston-github-url]: https://github.com/winstonjs/winston
